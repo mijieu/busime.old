@@ -1,0 +1,40 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+	<p:growl id="growl" />
+
+	<p:menubar>
+		<p:submenu styleClass="menuItem" label="File" icon="fa fa-file">
+			<p:menuitem value="Save" icon="fa fa-save" />
+			<p:menuitem value="Save as..." icon="fa fa-save" />
+			<p:menuitem value="Commit" icon="fa fa-database" />
+			<p:menuitem value="Lock" icon="fa fa-lock" />
+			<p:menuitem value="File Storage" icon="fa fa-archive" />
+			<p:menuitem value="Run..." icon="fa fa-play" />
+			<p:menuitem value="Data Model" icon="fa fa-adn" />
+		</p:submenu>
+		<p:menuitem styleClass="menuItem" value="Save" icon="fa fa-save" />
+		<p:menuitem styleClass="menuItem" value="Save as..." icon="fa fa-save" />
+		<p:menuitem styleClass="menuItem" value="Commit" icon="fa fa-database" />
+		<p:menuitem styleClass="menuItem" value="Lock" icon="fa fa-lock" />
+		<p:menuitem styleClass="menuItem" value="File Storage" icon="fa fa-archive" />
+		<p:menuitem styleClass="menuItem" value="Info" ajax="false" icon="fa fa-info" />
+		<p:menuitem styleClass="menuItem" value="Run..." icon="fa fa-play" />
+		<p:menuitem styleClass="menuItem" value="Data Model" icon="fa fa-adn" />
+
+		<f:facet name="options">
+			<p:inputText style="margin:0 10px 0 10px; vertical-align:middle;"
+				placeholder="Search" />
+			<p:commandButton value="Logout" type="button" icon="ui-icon-extlink" />
+		</f:facet>
+	</p:menubar>
+
+	<p:dialog visible="false" header="Info Dialog">
+            PrimeFaces Menubar brings desktop menubar to JSF applications.<br />
+            Combine submenus and menu items to execute ajax, non-ajax and navigations.
+        </p:dialog>
+
+</ui:composition>
